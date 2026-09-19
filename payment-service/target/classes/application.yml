@@ -1,0 +1,41 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: payment-service
+  datasource:
+    url: jdbc:h2:mem:paymentdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+app:
+  cors:
+    allowed-origins: http://localhost:5173,http://localhost:4173
+  # Payment provider config. TEST credentials only — these are read from
+  # environment variables so real/secret keys are NEVER committed to source.
+  # Set the following before starting the service (values shown are the shape
+  # of Razorpay/Stripe TEST keys):
+  #   RAZORPAY_KEY_ID=rzp_test_xxxxxxxxxxxxxx
+  #   RAZORPAY_KEY_SECRET=xxxxxxxxxxxxxxxxxxxxxxxx
+  #   STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+  #   STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+  payment:
+    # provider: razorpay | stripe | mock
+    provider: ${PAYMENT_PROVIDER:razorpay}
+    currency: INR
+    razorpay:
+      key-id: ${RAZORPAY_KEY_ID:rzp_test_1234567890abcd}
+      key-secret: ${RAZORPAY_KEY_SECRET:testsecretkey1234567890}
+    stripe:
+      secret-key: ${STRIPE_SECRET_KEY:sk_test_1234567890abcd}
+      publishable-key: ${STRIPE_PUBLISHABLE_KEY:pk_test_1234567890abcd}
