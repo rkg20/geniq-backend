@@ -1,0 +1,11 @@
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\UserServiceApplication.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\dto\RegisterRequest.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\dto\LoginRequest.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\controller\AuthController.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\model\User.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\repository\LeadRepository.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\dto\UserResponse.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\controller\LeadController.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\config\SecurityConfig.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\model\Lead.java
+C:\Users\1664069\Downloads\GenIQ\backend\user-service\src\main\java\com\geniq\user\repository\UserRepository.java
